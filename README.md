@@ -22,6 +22,10 @@ A daily habit tracker created for Oregon State University's Winter 2023 "Beaver 
     - Link to demo
 
  -->
+ This daily habit tracker allows the user to track any number of habits. 
+ - First, the user chooses at least one habit to track. 
+ - Each day the user completes their goal, they "check" the box for the day. 
+ - User can view how often they have completed each goal. 
 
 ### Built With
 
