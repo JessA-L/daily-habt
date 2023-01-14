@@ -18,7 +18,7 @@ db.once("open", () => {
  */
 const habitSchema = mongoose.Schema({
     date: { type: String, required: true},
-    habitName: { type: String, required: true},
+    habit_name: { type: String, required: true},
     completed: { type: Boolean, required: true}
 });
 
