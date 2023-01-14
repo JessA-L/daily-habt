@@ -46,9 +46,6 @@ function App() {
     setHabits(newHabits)
   };
 
-
-  
-
   return (
 
     <div className="App">
