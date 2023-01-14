@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import * as habits from './habits_model.mjs';
 import express from 'express';
-import {body, validationResult} from 'express-validator';
 
 const port = process.env.PORT;
 
