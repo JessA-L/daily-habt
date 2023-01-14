@@ -12,11 +12,15 @@ A daily habit tracker created for Oregon State University's Winter 2023 "Beaver 
 
 ## Overview
 
-<!-- TODO: Add a screenshot of the live project.
-    1. Link to a 'live demo.'
-    2. Describe your overall experience in a couple of sentences.
-    3. List a few specific technical things that you learned or improved on.
-    4. Share any other tips or guidance for others attempting this or something similar.
+<!-- TODO: 
+
+    - Provide general information about your project here.
+    - What problem does it (intend to) solve?
+    - What is the purpose of your project?
+    - Why did you undertake it?
+    - Add a screenshot of the live project
+    - Link to demo
+
  -->
 
 ### Built With
@@ -39,7 +43,7 @@ $ npm start
 
 ## Contact
 
-<!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. LinkedIn and dev.to are minimum. -->
+<!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. -->
 
 ## Acknowledgements
 
