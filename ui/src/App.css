@@ -12,6 +12,7 @@ h1 {
 
 p {
   color: white;
+  font-weight: bold;
 }
 
 #habit-week-display {
@@ -132,5 +133,9 @@ span.logo-right {
 #add-habit {
   background-color: #39d353;
   border-radius: 8px;
+  border-color: #39d353;
+  margin-top: 4px;
   font-size: 14px;
 }
+
+
