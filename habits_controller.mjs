@@ -13,7 +13,7 @@ app.use(express.json());
 /**
  * Add a new habit to the db with the specified date, name, and completion status.
  */
-app.post();
+// app.post();
 
 /**
  * Retrieves all habits currently in the db.
