@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+@import '../node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#habit-week-display {
+  background-color: #333333;
+  position: absolute;
+  top: 100px;
+}
+.habit-week, .date-display {
+  background-color: #333333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.habit-week {
+  height: 100px;
+  background-color: black;
+}
+/* .date-display {
+  position: absolute;
+  left: 200px;
+} */
+.top-bar {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: auto;
+  /* position: absolute; */
+  /* left: 200px; */
+}
+
+.habit-day {
+  background-color: #333333;
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 15px;
+  
+} 
+.habit-day > input {
+  opacity: 0;
+}
+.container {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+}
+.container input {
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  height: 90px;
+  width: 90px;
+  border-radius: 15px;;
+  background-color: #222222;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #444444;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #39d353;
+  /* background-color: #26a641; */
+}
+
+
+
+.date {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* .habit-week, .date-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+
+} */
+
+
+/* .date>p {
+  position: absolute;
+  bottom: 0;
+  
+} */
+
+.habit-week-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  width: 200px;
+  background-color: #333333;
+  height: 100%;
+  border-top: 2px solid #222222;
+
+
+}
+
+#add-habit-form {
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 200px;
+  padding-top: auto;
+
 }
