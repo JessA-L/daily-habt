@@ -4,7 +4,7 @@ import HabitWeek from './HabitWeek';
 
 function HabitWeekDisplay({toggleHabitDay, setHabits, habits, dates}){
     return (
-        <div>
+        <div id="grid">
             <DateDisplay setHabits = {setHabits} dates = {dates} />
             <div id="habit-week-display">
                 

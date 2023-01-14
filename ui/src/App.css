@@ -4,21 +4,38 @@ body {
   background-color: black;
 }
 
+h1 { 
+  display: flex;
+  justify-content: center;
+  font-size: 46px;
+}
+
 p {
   color: white;
 }
 
 #habit-week-display {
   background-color: #333333;
-  position: absolute;
+  position: sticky;
   top: 100px;
+  justify-content: center;
 }
+
+h1.logo-left { 
+  color: white;
+}
+
+span.logo-right { 
+  color: #39d353;
+  font-weight: bold;
+}
+
 .habit-week, .date-display {
-  background-color: #333333;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
+
 }
 
 .habit-week {
@@ -29,14 +46,14 @@ p {
   position: absolute;
   left: 200px;
 } */
+
 .top-bar {
-  
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   margin: auto;
-  /* position: absolute; */
-  /* left: 200px; */
+  position: sticky;
+  justify-content: center;
 }
 
 .habit-day {
@@ -61,6 +78,7 @@ p {
   height: 0;
   width: 0;
 }
+
 .checkmark {
   position: absolute;
   top: 3%;
@@ -80,32 +98,13 @@ p {
   /* background-color: #26a641; */
 }
 
-
-
 .date {
   width: 100px;
-  height: 100px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
-
-/* .habit-week, .date-display {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-
-} */
-
-
-/* .date>p {
-  position: absolute;
-  bottom: 0;
-  
-} */
 
 .habit-week-title {
   display: flex;
@@ -113,15 +112,10 @@ p {
   justify-content: flex-end;
   padding-right: 10px;
   width: 200px;
-  background-color: #333333;
   height: 100%;
-  border-top: 2px solid #222222;
-
-
 }
 
 #add-habit-form {
-  background-color: #333333;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -129,4 +123,14 @@ p {
   width: 200px;
   padding-top: auto;
 
+}
+
+#add-habit-form input {
+  background-color: #ffffff;
+}
+
+#add-habit {
+  background-color: #39d353;
+  border-radius: 12px;
+  font-size: 14px;
 }
