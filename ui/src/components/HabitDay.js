@@ -1,11 +1,12 @@
 import React from 'react';
 import HabitWeek from './HabitWeek';
 
-function HabitDay({updateHabitDay, date, habit, completed, streakCounter}) {
+function HabitDay({index, habitStreakCount, updateHabitDay, date, habit, completed, streakCounter}) {
 
     function handleHabitClick() {
-        console.log(habit.name, date)
+        
         updateHabitDay(habit._id, date);
+        // habitStreakCount(habit._id);
     };
 
     return (
@@ -16,10 +17,10 @@ function HabitDay({updateHabitDay, date, habit, completed, streakCounter}) {
                     id={`${habit.name}:${date}`} 
                     checked={completed}
                     onChange={handleHabitClick}
-                    streakCounter={streakCounter}
+        
                     />
                 <span className="checkmark"></span>
-                <div id='streakCounter'>{streakCounter}</div>
+                {/* <div id='streakCounter'>{streakCounter}</div> */}
             </label>
         </div>
     )
