@@ -14,12 +14,11 @@ db.once("open", () => {
 });
 
 /**
- * Define habits schema
+ * Define habitDate schema
  */
-const habitSchema = mongoose.Schema({
+const habitDateSchema = mongoose.Schema({
     date: { type: String, required: true},
     habit_name: { type: String, required: true},
-    completed: { type: Boolean, required: true}
 });
 
 // Compile a model from the schema
