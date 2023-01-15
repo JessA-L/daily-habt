@@ -4,6 +4,10 @@ body {
   background-color: black;
 }
 
+.light {
+  background-color: lightgray;
+}
+
 h1 { 
   display: flex;
   justify-content: center;
@@ -32,6 +36,10 @@ button {
 
 h1.logo-left { 
   color: white;
+}
+
+h1.logo-left.light { 
+  color: black;
 }
 
 span.logo-right { 

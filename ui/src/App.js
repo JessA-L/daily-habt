@@ -17,11 +17,24 @@ function App() {
   //   {name: "sleep 8 hours", dates_accomp: ["1/9", "1/11", "1/13"]}
   // ]);
 
+  // Set light/dark theme:
+  const [theme, setTheme] = useState('dark');
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  };
+
   const [habits, setHabits] = useState([]);
   const [dates, setDates] = useState([]);
   // const dates = ["1/8", "1/9", "1/10", "1/11", "1/12", "1/13", "1/14"];
 
-
+  // Set light/dark theme:
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   useEffect(() => {
     // const storedHabits = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
@@ -131,6 +144,7 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <button onClick={toggleTheme}>Toggle Theme</button>
     </div>
   );
 }
