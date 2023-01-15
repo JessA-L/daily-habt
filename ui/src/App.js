@@ -105,7 +105,7 @@ function App() {
   return (
 
     <div className="App">
-      <HabitWeekDisplay updateHabitDay={updateHabitDay} setHabits={setHabits} habits={habits} dates={dates} />
+      <HabitWeekDisplay loadHabits={loadHabits} updateHabitDay={updateHabitDay} setHabits={setHabits} habits={habits} dates={dates} />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

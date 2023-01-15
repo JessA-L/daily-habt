@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Date from './Date';
 
-function DateDisplay({setHabits, dates}) {
+function DateDisplay({loadHabits, setHabits, dates}) {
     const dateArray = [];
     const habitNameRef = useRef()
 
@@ -31,6 +31,7 @@ function DateDisplay({setHabits, dates}) {
         setHabits(prevHabits => {
             return [...prevHabits, newHabit]
         })
+        loadHabits();
         habitNameRef.current.value = null;
     }
 
