@@ -1,6 +1,6 @@
 # Daily Habt
 
-A daily habit tracker created for Oregon State University's Winter 2023 "Beaver Hacks" hackathon.
+A daily habit tracker created by "Jester Katana" for Oregon State University's Winter 2023 "Beaver Hacks" hackathon.
 
 ## Table of Contents
 
