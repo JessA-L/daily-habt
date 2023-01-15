@@ -30,32 +30,13 @@ function App() {
 
     //populates date data
     const dateArray = []
-    const currDate = new Date();
-    let currMonth = currDate.getMonth() + 1;
-    let currDay = currDate.getDate();
-    dateArray.push(`${currMonth}/${currDay}`)
+    let currDate = new Date();
+    dateArray.push(currDate.toLocaleDateString());
+
     for (let i=0; i<6; i++){
-      currDay = currDay - 1;
-      if (currDay === 0) {
-        console.log(currDay)
-        currMonth -= 1;
-      
-        switch (currMonth) {
-          case 0:
-            currMonth = 12;
-            currDay = 31;
-            break;
-          case 1: case 3: case 5: case 7: case 8: case 10:
-            currDay = 31;
-            break;
-          case 4: case 6: case 9: case 11:
-            currDay = 30;
-            break
-          case 2: 
-            currDay = 28;
-            break
-        }}
-      dateArray.unshift(`${currMonth}/${currDay}`)
+      currDate.setDate(currDate.getDate() - 1)
+
+      dateArray.unshift(currDate.toLocaleDateString());
       } 
     
 
