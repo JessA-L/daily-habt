@@ -52,10 +52,14 @@ span.logo-right {
   /* position: absolute; */
   position: relative;
   bottom: 5px;
-  border: solid white;
+  border: solid #707070;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
+}
+.arrow:hover {
+  border: solid white;
+  border-width: 0 3px 3px 0;
 }
 
 .left {
