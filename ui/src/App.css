@@ -124,6 +124,10 @@ span.logo-right {
   /* background-color: #26a641; */
 }
 
+.deleteButton {
+  position: absolute;
+  right: 20%;
+}
 .date {
   width: 100px;
   height: auto;

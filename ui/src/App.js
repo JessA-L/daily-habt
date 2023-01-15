@@ -95,6 +95,17 @@ function App() {
     setHabits(newHabits)
   };
 
+  const onDeleteHabit = async function(_id) {
+    const response = await fetch(`/habits/${_id}`, {method: 'DELETE'});
+    if (response.status === 204) {
+      const getResponse = await fetch('/habits');
+      const newHabits = await getResponse.json();
+      setHabits(newHabits);
+    } else {
+      console.error(`Failed to delete exercise with _id = ${_id}, status code = ${response.status}`)
+    }
+  }
+
   const loadHabits = async () => {
     const response = await fetch('/habits');
     const newHabits = await response.json();

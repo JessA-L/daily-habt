@@ -73,6 +73,23 @@ app.post('/habits', (req,res) => {
     })
 });
 
+app.delete('/habits/:_id', (req, res) => {
+    console.log("made it")
+    habits.deleteById(req.params._id)
+        .then(deletedCount => {
+            console.log(deletedCount)
+            if (deletedCount === 1) {
+                res.status(204).send();
+            } else {
+                res.status(404).json({ Error: 'Document not Found' });
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            res.send({ error: 'Request to delete a document failed'});
+        });
+});
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}...`); 
 });
