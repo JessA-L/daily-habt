@@ -1,11 +1,11 @@
 import React from 'react';
 import HabitWeek from './HabitWeek';
 
-function HabitDay({toggleHabitDay, date, habit, completed}) {
+function HabitDay({updateHabitDay, date, habit, completed}) {
 
     function handleHabitClick() {
         console.log(habit.name, date)
-        toggleHabitDay(habit.name, date)
+        updateHabitDay(habit._id, date)
     }
     return (
         <div className="habit-day" >
