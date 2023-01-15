@@ -9,6 +9,7 @@ function HabitWeek({toggleHabitDay, habit, dates}) {
     return (
         <div className="habit-week">
             <p className="habit-week-title">{habit.name}</p>
+            
             {dates.map((date, i) => 
                 <HabitDay 
                     toggleHabitDay = {toggleHabitDay}
@@ -16,6 +17,7 @@ function HabitWeek({toggleHabitDay, habit, dates}) {
                     habit={habit}
                     completed={habit.dates_accomp.includes(date)} 
                     key={i}/>)}
+            
         </div>
     )
 }
