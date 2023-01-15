@@ -19,9 +19,8 @@ function App() {
 
   const [habits, setHabits] = useState([]);
   const [dates, setDates] = useState([]);
+  const [streakCounter, setStreakCounter] = useState(0); 
   // const dates = ["1/8", "1/9", "1/10", "1/11", "1/12", "1/13", "1/14"];
-
-
 
   useEffect(() => {
     // const storedHabits = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
@@ -75,7 +74,8 @@ function App() {
       habit.dates_accomp.splice(habit.dates_accomp.indexOf(date), 1);
       console.log(habit.dates_accomp)
     } else {
-      habit.dates_accomp.push(date)
+      habit.dates_accomp.push(date); 
+      habitStreakCount(habit.dates_accomp); 
     }
     const response = await fetch(`/habits/${habit_id}`, {
       method: 'PUT',
@@ -92,7 +92,8 @@ function App() {
       const errMessage = await response.json();
       alert(`Failed to update document. Status ${response.status}. ${errMessage.Error}`);
     }
-    setHabits(newHabits)
+    setHabits(newHabits);
+    habitStreakCount(habit.dates_accomp); 
   };
 
   const onDeleteHabit = async function(_id) {
@@ -113,10 +114,32 @@ function App() {
     setHabits(newHabits);
   };
 
+  // function to get streak for each habit
+  const habitStreakCount = function(datesAccomp) {
+      console.log(datesAccomp);
+      let streakCount = 0; 
+      let cmpStreaks = []; 
+      for (let i=0; i<=datesAccomp.length; i++) {
+        console.log(datesAccomp[i]); 
+        let todaysDate = new Date(datesAccomp[i]); 
+        let result = todaysDate.setDate(todaysDate.getDate()-1); 
+        let yesterday = new Date(result); 
+        if (datesAccomp.includes(yesterday.toLocaleDateString())) {
+            streakCount++; 
+        } else {
+            // add streakCount to array to get max streak
+            cmpStreaks.push(streakCount); 
+            streakCount = 1; 
+        }; 
+      }; 
+      const finalStreak = Math.max(...cmpStreaks); 
+      setStreakCounter(finalStreak);
+  }; 
+
   return (
 
     <div className="App">
-      <HabitWeekDisplay loadHabits={loadHabits} updateHabitDay={updateHabitDay} setHabits={setHabits} habits={habits} dates={dates} />
+      <HabitWeekDisplay loadHabits={loadHabits} updateHabitDay={updateHabitDay} setHabits={setHabits} habits={habits} dates={dates} streakCounter={streakCounter}/>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

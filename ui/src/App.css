@@ -43,6 +43,10 @@ span.logo-right {
   height: 100px;
   background-color: black;
 }
+
+#streakCounter {
+  color: white;
+}
 /* .date-display {
   position: absolute;
   left: 200px;

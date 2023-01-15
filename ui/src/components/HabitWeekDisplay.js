@@ -2,7 +2,7 @@ import React from 'react';
 import DateDisplay from './DateDisplay';
 import HabitWeek from './HabitWeek';
 
-function HabitWeekDisplay({onDeleteHabit, loadHabits, updateHabitDay, setHabits, habits, dates, habitStreakDisplay}){
+function HabitWeekDisplay({onDeleteHabit, loadHabits, updateHabitDay, setHabits, habits, dates, streakCounter}){
     return (
         <div id="grid">
             <DateDisplay loadHabits = {loadHabits} setHabits = {setHabits} dates = {dates} />
@@ -15,6 +15,7 @@ function HabitWeekDisplay({onDeleteHabit, loadHabits, updateHabitDay, setHabits,
                         key = {i}
                         habit = {habit}
                         dates = {dates}
+                        streakCounter={streakCounter}
                     />)}
             </div>
         </div>
