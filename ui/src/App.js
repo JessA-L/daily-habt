@@ -33,7 +33,7 @@ function App() {
   }, [habits])
 
   // Source: https://medium.com/@quynh.totuan/how-to-get-the-current-week-in-javascript-9e64d45a9a08
-  // Getting days of the week leading up to the date the user wants
+  // Getting days of the week starting from when user begins adding the habit
   let curr = new Date;
   let dates = [];
 
@@ -43,7 +43,7 @@ function App() {
     dates.push(day); 
   };
 
-  console.log(dates); 
+  // console.log(dates); 
 
   function toggleHabitDay(name, date) {
     const newHabits = [...habits]
