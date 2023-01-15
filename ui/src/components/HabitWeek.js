@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import HabitDay from './HabitDay';
 
-function HabitWeek({loadHabits, updateHabitDay, habit, dates, streakCounter}) {
+function HabitWeek({index, habitStreakCount, loadHabits, updateHabitDay, habit, dates, streakCounter}) {
     // const habitDays = [];
     // for (const date of dates) {
     //     habitDays.push(<HabitDay date={date}/>)
@@ -24,6 +24,8 @@ function HabitWeek({loadHabits, updateHabitDay, habit, dates, streakCounter}) {
             
             {dates.map((date, i) => 
                 <HabitDay 
+                    index = {index}
+                    habitStreakCount = {habitStreakCount}
                     updateHabitDay = {updateHabitDay}
                     date={date} 
                     habit={habit}
