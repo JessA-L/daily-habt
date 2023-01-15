@@ -1,6 +1,6 @@
 # Daily Habt
 
-A daily habit tracker created by "Jester Katana" for Oregon State University's Winter 2023 "Beaver Hacks" hackathon.
+A daily habit tracker created by the "Jester Katana" team for Oregon State University's Winter 2023 "Beaver Hacks" hackathon.
 
 ## Table of Contents
 
@@ -20,7 +20,6 @@ A daily habit tracker created by "Jester Katana" for Oregon State University's W
     - Why did you undertake it?
     - Add a screenshot of the live project
     - Link to demo
-
  -->
  This daily habit tracker allows the user to track any number of habits. 
  - First, the user chooses at least one habit to track. 
@@ -31,20 +30,29 @@ A daily habit tracker created by "Jester Katana" for Oregon State University's W
 
 <!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
 - [React](https://reactjs.org/)
+- [MongoDB](https://www.mongodb.com/)
 
 ## Features
 
 <!-- TODO: List what specific 'user problems' that this application solves. -->
-
+ - User can view how often they have completed each goal. 
+ - Streaktracker for each habit
+ 
 ## Setup
 
 To run this project, install it locally using npm:
-```
-$ cd ui/src
-$ npm install
-$ npm install modern-normalize --save
-$ npm start
-```
+- In root directory terminal:
+    ```
+    $ npm install
+    $ npm start
+    ```
+- In new terminal:
+    ```
+    $ cd ui/src
+    $ npm install
+    $ npm install modern-normalize --save
+    $ npm start
+    ```
 
 ## Contact
 
