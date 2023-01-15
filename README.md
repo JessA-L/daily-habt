@@ -7,6 +7,7 @@ A daily habit tracker created by the "Jester Katana" team for Oregon State Unive
 - [Overview](#overview)
 - [Built With](#built-with)
 - [Features](#features)
+- [Setup](#setup)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
@@ -31,6 +32,7 @@ A daily habit tracker created by the "Jester Katana" team for Oregon State Unive
 <!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
 - [React](https://reactjs.org/)
 - [MongoDB](https://www.mongodb.com/)
+- [Express.js](https://expressjs.com/)
 
 ## Features
 
