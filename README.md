@@ -39,12 +39,18 @@ A daily habit tracker created by "Jester Katana" for Oregon State University's W
 ## Setup
 
 To run this project, install it locally using npm:
-```
-$ cd ui/src
-$ npm install
-$ npm install modern-normalize --save
-$ npm start
-```
+- In root directory terminal:
+    ```
+    $ npm install
+    $ npm start
+    ```
+- In new terminal:
+    ```
+    $ cd ui/src
+    $ npm install
+    $ npm install modern-normalize --save
+    $ npm start
+    ```
 
 ## Contact
 
