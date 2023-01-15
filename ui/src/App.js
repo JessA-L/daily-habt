@@ -33,13 +33,8 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(habits))
   }, [habits]);
 
-// Source: https://medium.com/@quynh.totuan/how-to-get-the-current-week-in-javascript-9e64d45a9a08
-// Getting days of the week when user begins adding a habit to the app
-let curr = new Date;
-let dates = [];
-
   // Source: https://medium.com/@quynh.totuan/how-to-get-the-current-week-in-javascript-9e64d45a9a08
-  // Getting days of the week starting from when user begins adding the habit
+  // Getting days of the week when user begins adding a habit to the app
   let curr = new Date;
   let dates = [];
 
