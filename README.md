@@ -39,6 +39,8 @@ A daily habit tracker created by the "Jester Katana" team for Oregon State Unive
 <!-- TODO: List what specific 'user problems' that this application solves. -->
  - User can view how often they have completed each goal. 
  - Streaktracker for each habit
+
+ ![dailyHabit page](/images/dh-home.jpg)
  
 ## Setup
 
