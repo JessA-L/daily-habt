@@ -111,7 +111,7 @@ function App() {
     const newHabits = await response.json();
     console.log(newHabits)
     setHabits(newHabits);
-  }
+  };
 
   return (
 

@@ -5,8 +5,9 @@ function HabitDay({updateHabitDay, date, habit, completed}) {
 
     function handleHabitClick() {
         console.log(habit.name, date)
-        updateHabitDay(habit._id, date)
-    }
+        updateHabitDay(habit._id, date);
+    };
+
     return (
         <div className="habit-day" >
             <label className="container">

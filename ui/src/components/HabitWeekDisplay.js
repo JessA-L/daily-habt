@@ -2,7 +2,7 @@ import React from 'react';
 import DateDisplay from './DateDisplay';
 import HabitWeek from './HabitWeek';
 
-function HabitWeekDisplay({onDeleteHabit, loadHabits, updateHabitDay, setHabits, habits, dates}){
+function HabitWeekDisplay({onDeleteHabit, loadHabits, updateHabitDay, setHabits, habits, dates, habitStreakDisplay}){
     return (
         <div id="grid">
             <DateDisplay loadHabits = {loadHabits} setHabits = {setHabits} dates = {dates} />
