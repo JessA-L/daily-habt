@@ -12,11 +12,24 @@ function DateDisplay({setHabits, dates}) {
                                     rightButton={(i===(dates.length-1))}/>)
     }
 
-    function handleAddHabit(e) {
+    const handleAddHabit = async function(e) {
         const name = habitNameRef.current.value;
         if (name === '') return;
+        const newHabit = {name: name, dates_accomp: []}
+        const response = await fetch('/habits', {
+            method: 'post',
+            body: JSON.stringify(newHabit),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+        if(response.status === 201){
+            alert("Successfully added the habit!");
+        } else {
+            alert(`Failed to add habit, status code = ${response.status}`);
+        }
         setHabits(prevHabits => {
-            return [...prevHabits, {name: name, dates_accomp: []}]
+            return [...prevHabits, newHabit]
         })
         habitNameRef.current.value = null;
     }
