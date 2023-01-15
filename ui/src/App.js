@@ -38,13 +38,18 @@ function App() {
 let curr = new Date;
 let dates = [];
 
-for (let i=1; i<=7; i++) {
-  let first = curr.getDate() - curr.getDay() + i;
-  let day = new Date(curr.setDate(first)).toLocaleDateString(); 
-  dates.push(day); 
-};
+  // Source: https://medium.com/@quynh.totuan/how-to-get-the-current-week-in-javascript-9e64d45a9a08
+  // Getting days of the week starting from when user begins adding the habit
+  let curr = new Date;
+  let dates = [];
 
-console.log(dates); 
+  for (let i=1; i<=7; i++) {
+    let first = curr.getDate() - curr.getDay() + i;
+    let day = new Date(curr.setDate(first)).toLocaleDateString(); 
+    dates.push(day); 
+  };
+
+  // console.log(dates); 
 
   function toggleHabitDay(name, date) {
     const newHabits = [...habits]

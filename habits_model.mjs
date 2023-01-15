@@ -14,11 +14,11 @@ db.once("open", () => {
 });
 
 /**
- * Define habitDays
+ * Define habitDate schema
  */
-const habitSchema = mongoose.Schema({
-    habitName: { type: String, required: true},
-    streakCounter: { type: Number, required: true }
+const habitDateSchema = mongoose.Schema({
+    date: { type: String, required: true},
+    habit_name: { type: String, required: true},
 });
 
 // Compile a model from the schema
