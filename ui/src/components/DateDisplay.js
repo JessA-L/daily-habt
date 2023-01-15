@@ -5,8 +5,11 @@ function DateDisplay({setHabits, dates}) {
     const dateArray = [];
     const habitNameRef = useRef()
 
-    for (const date of dates) {
-        dateArray.push(<Date key = {date} date={date}/>)
+
+    for (let i=0; i<dates.length; i++){
+        dateArray.push(<Date key = {dates[i]} date={dates[i]} 
+                                    leftButton={(i===0)} 
+                                    rightButton={(i===(dates.length-1))}/>)
     }
 
     function handleAddHabit(e) {
@@ -25,7 +28,9 @@ function DateDisplay({setHabits, dates}) {
                 <button id="add-habit" onClick={handleAddHabit}>Add Habit</button>
             </div>
             <div className="date-display">
+                
                 {dateArray}
+                
             </div>
         </div>
     )

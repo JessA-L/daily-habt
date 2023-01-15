@@ -48,6 +48,27 @@ span.logo-right {
   left: 200px;
 } */
 
+.arrow {
+  /* position: absolute; */
+  position: relative;
+  bottom: 5px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  /* right: 10px; */
+}
+
 .top-bar {
   display: flex;
   flex-direction: row;
