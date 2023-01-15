@@ -17,8 +17,9 @@ function App() {
   //   {name: "sleep 8 hours", dates_accomp: ["1/9", "1/11", "1/13"]}
   // ]);
 
+  // Initialize state variables to be passed down 
   const [habits, setHabits] = useState([]);
-  const dates = ["1/8", "1/9", "1/10", "1/11", "1/12", "1/13", "1/14"];
+  // const dates = ["1/8", "1/9", "1/10", "1/11", "1/12", "1/13", "1/14"];
 
   useEffect(() => {
     const storedHabits = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
@@ -30,9 +31,20 @@ function App() {
   useEffect(() => {
     console.log(habits);
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(habits))
-  }, [habits])
+  }, [habits]);
 
+// Source: https://medium.com/@quynh.totuan/how-to-get-the-current-week-in-javascript-9e64d45a9a08
+// Getting days of the week when user begins adding a habit to the app
+let curr = new Date;
+let dates = [];
 
+for (let i=1; i<=7; i++) {
+  let first = curr.getDate() - curr.getDay() + i;
+  let day = new Date(curr.setDate(first)).toLocaleDateString(); 
+  dates.push(day); 
+};
+
+console.log(dates); 
 
   function toggleHabitDay(name, date) {
     const newHabits = [...habits]
