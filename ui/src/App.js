@@ -18,6 +18,7 @@ function App() {
   // ]);
 
   const [habits, setHabits] = useState([]);
+  const [dates, setDates] = useState([]);
   // const dates = ["1/8", "1/9", "1/10", "1/11", "1/12", "1/13", "1/14"];
 
   useEffect(() => {
@@ -25,7 +26,44 @@ function App() {
     // console.log(Boolean(storedHabits));
     if (storedHabits) setHabits(storedHabits)
     // console.log(habits);
+
+
+    //populates date data
+    const dateArray = []
+    const currDate = new Date();
+    let currMonth = currDate.getMonth() + 1;
+    let currDay = currDate.getDate();
+    dateArray.push(`${currMonth}/${currDay}`)
+    for (let i=0; i<6; i++){
+      currDay = currDay - 1;
+      if (currDay === 0) {
+        console.log(currDay)
+        currMonth -= 1;
+      
+        switch (currMonth) {
+          case 0:
+            currMonth = 12;
+            currDay = 31;
+            break;
+          case 1: case 3: case 5: case 7: case 8: case 10:
+            currDay = 31;
+            break;
+          case 4: case 6: case 9: case 11:
+            currDay = 30;
+            break
+          case 2: 
+            currDay = 28;
+            break
+        }}
+      dateArray.unshift(`${currMonth}/${currDay}`)
+      } 
+    
+
+    setDates(dateArray)
   }, [])
+
+
+  
 
   useEffect(() => {
     console.log(habits);
@@ -34,14 +72,14 @@ function App() {
 
   // Source: https://medium.com/@quynh.totuan/how-to-get-the-current-week-in-javascript-9e64d45a9a08
   // Getting days of the week starting from when user begins adding the habit
-  let curr = new Date;
-  let dates = [];
+  // let curr = new Date;
+  // let dates = [];
 
-  for (let i=1; i<=7; i++) {
-    let first = curr.getDate() - curr.getDay() + i;
-    let day = new Date(curr.setDate(first)).toLocaleDateString(); 
-    dates.push(day); 
-  };
+  // for (let i=1; i<=7; i++) {
+  //   let first = curr.getDate() - curr.getDay() + i;
+  //   let day = new Date(curr.setDate(first)).toLocaleDateString(); 
+  //   dates.push(day); 
+  // };
 
   // console.log(dates); 
 
