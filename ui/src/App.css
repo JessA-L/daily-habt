@@ -15,6 +15,14 @@ p {
   font-weight: bold;
 }
 
+button {
+  background-color: #39d353;
+  border-radius: 8px;
+  border-color: #39d353;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
 #habit-week-display {
   background-color: #333333;
   position: sticky;
@@ -162,13 +170,3 @@ span.logo-right {
 #add-habit-form input {
   background-color: #ffffff;
 }
-
-#add-habit {
-  background-color: #39d353;
-  border-radius: 8px;
-  border-color: #39d353;
-  margin-top: 4px;
-  font-size: 14px;
-}
-
-
