@@ -21,10 +21,12 @@ function App() {
   const [dates, setDates] = useState([]);
   // const dates = ["1/8", "1/9", "1/10", "1/11", "1/12", "1/13", "1/14"];
 
+
+
   useEffect(() => {
-    const storedHabits = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    // const storedHabits = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     // console.log(Boolean(storedHabits));
-    if (storedHabits) setHabits(storedHabits)
+    // if (storedHabits) setHabits(storedHabits)
     // console.log(habits);
 
 
@@ -39,17 +41,19 @@ function App() {
       dateArray.unshift(currDate.toLocaleDateString());
       } 
     
-
-    setDates(dateArray)
+    loadHabits();
+    setDates(dateArray);
   }, [])
 
 
   
 
-  useEffect(() => {
-    console.log(habits);
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(habits))
-  }, [habits])
+  // useEffect(() => {
+  //   console.log(habits);
+  //   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(habits))
+  // }, [habits])
+
+
 
   // Source: https://medium.com/@quynh.totuan/how-to-get-the-current-week-in-javascript-9e64d45a9a08
   // Getting days of the week starting from when user begins adding the habit
@@ -75,6 +79,12 @@ function App() {
     }
     setHabits(newHabits)
   };
+
+  const loadHabits = async () => {
+    const response = await fetch('/habits');
+    const newHabits = await response.json();
+    setHabits(newHabits);
+  }
 
   return (
 
