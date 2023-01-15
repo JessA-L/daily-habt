@@ -1,7 +1,7 @@
 import React from 'react';
 import HabitDay from './HabitDay';
 
-function HabitWeek({toggleHabitDay, habit, dates}) {
+function HabitWeek({updateHabitDay, habit, dates}) {
     // const habitDays = [];
     // for (const date of dates) {
     //     habitDays.push(<HabitDay date={date}/>)
@@ -12,7 +12,7 @@ function HabitWeek({toggleHabitDay, habit, dates}) {
             
             {dates.map((date, i) => 
                 <HabitDay 
-                    toggleHabitDay = {toggleHabitDay}
+                    updateHabitDay = {updateHabitDay}
                     date={date} 
                     habit={habit}
                     completed={habit.dates_accomp.includes(date)} 

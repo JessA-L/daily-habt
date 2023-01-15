@@ -68,14 +68,29 @@ function App() {
 
   // console.log(dates); 
 
-  function toggleHabitDay(name, date) {
+  const updateHabitDay = async function(habit_id, date) {
     const newHabits = [...habits]
-    const habit = newHabits.find(habit => habit.name === name)
+    const habit = newHabits.find(habit => habit._id === habit_id)
     if (habit.dates_accomp.includes(date)) {
       habit.dates_accomp.splice(habit.dates_accomp.indexOf(date), 1);
       console.log(habit.dates_accomp)
     } else {
       habit.dates_accomp.push(date)
+    }
+    const response = await fetch(`/habits/${habit_id}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        name: habit.name,
+        dates_accomp: habit.dates_accomp
+      }),
+      headers: {'Content-Type': 'application/json',},
+    });
+
+    if (response.status === 200) {
+      alert("Successfully edited document!");
+    } else {
+      const errMessage = await response.json();
+      alert(`Failed to update document. Status ${response.status}. ${errMessage.Error}`);
     }
     setHabits(newHabits)
   };
@@ -83,13 +98,14 @@ function App() {
   const loadHabits = async () => {
     const response = await fetch('/habits');
     const newHabits = await response.json();
+    console.log(newHabits)
     setHabits(newHabits);
   }
 
   return (
 
     <div className="App">
-      <HabitWeekDisplay toggleHabitDay={toggleHabitDay} setHabits={setHabits} habits={habits} dates={dates} />
+      <HabitWeekDisplay updateHabitDay={updateHabitDay} setHabits={setHabits} habits={habits} dates={dates} />
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
