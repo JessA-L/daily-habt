@@ -49,4 +49,9 @@ const replaceHabit = async(_id, name, dates_accomp) => {
     return result.modifiedCount;
 }
 
-export {createHabit, findHabits, replaceHabit}
+const deleteById = async(_id) => {
+    const result = await Habit.deleteOne({_id: _id});
+    return result.deletedCount;
+};
+
+export {deleteById, createHabit, findHabits, replaceHabit}
