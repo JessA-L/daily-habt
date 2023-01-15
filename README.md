@@ -9,7 +9,7 @@ A daily habit tracker created by the "Jester Katana" team for Oregon State Unive
 - [Features](#features)
 - [Setup](#setup)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+<!-- - [Acknowledgements](#acknowledgements) -->
 
 ## Overview
 
@@ -61,7 +61,12 @@ To run this project, install it locally using npm:
 ## Contact
 
 <!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. -->
+- Jessica Allman-LaPorte [LinkedIn](https://www.linkedin.com/in/jessa-l/) [GitHub](https://github.com/JessA-L/daily-habt)
+- Kateri Boink [LinkedIn](https://www.linkedin.com/in/kateribb/) [GitHub](https://github.com/hanamilktea)
+- Hanami Do [LinkedIn](https://www.linkedin.com/in/hanami-do-a25678184/) [GitHub](https://github.com/hanamilktea) 
+- Peter Judge [LinkedIn](https://www.linkedin.com/in/peterjudge1/) [GitHub](https://github.com/pjudge65)
 
-## Acknowledgements
+
+<!-- ## Acknowledgements -->
 
 <!-- TODO: List any blog posts, tutorials or plugins that you may have used to complete the project. Only list those that had a significant impact. Obviously, we all 'Google' stuff while working on our things, but maybe something in particular stood out as a 'major contributor' to your skill set for this project. -->
