@@ -37,11 +37,12 @@ A daily habit tracker created for Oregon State University's Winter 2023 "Beaver 
 <!-- TODO: List what specific 'user problems' that this application solves. -->
 
 ## Setup
-<!-- TODO: Explain how to use -->
+
 To run this project, install it locally using npm:
 ```
-$ cd ../lorem
+$ cd ui/src
 $ npm install
+$ npm install modern-normalize --save
 $ npm start
 ```
 
