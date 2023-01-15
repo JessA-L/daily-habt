@@ -13,7 +13,7 @@ h1 {
 
 p {
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 button {
@@ -51,11 +51,6 @@ span.logo-right {
 .habit-week {
   height: 100px;
   background-color: black;
-}
-
-#streakCounter {
-  color: white;
-  margin-left: 5px;
 }
 
 .arrow {
@@ -159,6 +154,7 @@ span.logo-right {
   padding-right: 10px;
   width: 200px;
   height: 100%;
+  font-weight: bold;
 }
 
 #add-habit-form {
