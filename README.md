@@ -61,8 +61,8 @@ To run this project, install it locally using npm:
 ## Contact
 
 <!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. -->
-- Jessica Allman-LaPorte [LinkedIn](https://www.linkedin.com/in/jessa-l/) [GitHub](https://github.com/JessA-L/daily-habt)
-- Kateri Boink [LinkedIn](https://www.linkedin.com/in/kateribb/) [GitHub](https://github.com/hanamilktea)
+- Jessica Allman-LaPorte [LinkedIn](https://www.linkedin.com/in/jessa-l/) [GitHub](https://github.com/JessA-L)
+- Kateri Boink [LinkedIn](https://www.linkedin.com/in/kateribb/) [GitHub](https://https://github.com/katerib)
 - Hanami Do [LinkedIn](https://www.linkedin.com/in/hanami-do-a25678184/) [GitHub](https://github.com/hanamilktea) 
 - Peter Judge [LinkedIn](https://www.linkedin.com/in/peterjudge1/) [GitHub](https://github.com/pjudge65)
 
