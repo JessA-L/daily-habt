@@ -135,7 +135,7 @@ span.logo-right {
 }
 
 .deleteButton {
-  display: none;
+  /* display: none; */
   position: absolute;
   right: 20%;
 }
